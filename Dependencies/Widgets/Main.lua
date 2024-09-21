@@ -410,24 +410,24 @@ return function(Iris: Types.Internal)
 
     Iris._utility = widgets
 
-    loadstring(Urls["Dependencies/Widgets/Root"])(Iris, widgets)
-    loadstring(Urls["Dependencies/Widgets/Window"])(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Root"])())(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Window"])())(Iris, widgets)
 
-    loadstring(Urls["Dependencies/Widgets/Menu"])(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Menu"])())(Iris, widgets)
 
-    loadstring(Urls["Dependencies/Widgets/Format"])(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Format"])())(Iris, widgets)
 
-    loadstring(Urls["Dependencies/Widgets/Text"])(Iris, widgets)
-    loadstring(Urls["Dependencies/Widgets/Button"])(Iris, widgets)
-    loadstring(Urls["Dependencies/Widgets/Checkbox"])(Iris, widgets)
-    loadstring(Urls["Dependencies/Widgets/RadioButton"])(Iris, widgets)
-    loadstring(Urls["Dependencies/Widgets/Image"])(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Text"])())(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Button"])())(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Checkbox"])())(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/RadioButton"])())(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Image"])())(Iris, widgets)
 
-    loadstring(Urls["Dependencies/Widgets/Tree"])(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Tree"])())(Iris, widgets)
 
-    loadstring(Urls["Dependencies/Widgets/Input"])(Iris, widgets)
-    loadstring(Urls["Dependencies/Widgets/Combo"])(Iris, widgets)
-    loadstring(Urls["Dependencies/Widgets/Plot"])(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Input"])())(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Combo"])())(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Plot"])())(Iris, widgets)
 
-    loadstring(Urls["Dependencies/Widgets/Table"])(Iris, widgets)
+    (loadstring(Urls["Dependencies/Widgets/Table"]()))(Iris, widgets)
 end
