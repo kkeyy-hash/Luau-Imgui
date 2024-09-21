@@ -23,7 +23,7 @@ local Types = loadstring(Urls["Dependencies/Types"])()
 ]=]
 local Iris = {} :: Types.Iris
 
-local Internal: Types.Internal = loadstring(Urls["Dependencies/Internal"])(Iris)
+local Internal: Types.Internal = (loadstring(Urls["Dependencies/Internal"])())(Iris)
 
 --[=[
     @within Iris
@@ -662,9 +662,9 @@ end
     Iris:Connect(Iris.ShowDemoWindow)
     ```
 ]=]
-Iris.ShowDemoWindow = loadstring(Urls["Dependencies/DemoWindow"])(Iris)
+Iris.ShowDemoWindow = (loadstring(Urls["Dependencies/DemoWindow"]()))(Iris)
 
-loadstring(Urls["Dependencies/Widgets/Main"])(Internal)
-loadstring(Urls["Dependencies/API"])(Iris)
+(loadstring(Urls["Dependencies/Widgets/Main"])())(Internal)
+(loadstring(Urls["Dependencies/API"]()))(Iris)
 
 return Iris
