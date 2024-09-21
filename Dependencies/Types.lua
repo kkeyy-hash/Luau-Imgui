@@ -1,5 +1,5 @@
-local Urls = game:HttpGet("https://raw.githubusercontent.com/kkeyy-hash/Luau-Imgui/refs/heads/main/Urls.lua")
-local WidgetTypes = require(Urls["Dependencies/WidgetTypes"])
+local Urls = loadstring(game:HttpGet("https://raw.githubusercontent.com/kkeyy-hash/Luau-Imgui/refs/heads/main/Urls.lua"))()
+local WidgetTypes = loadstring(Urls["Dependencies/WidgetTypes"])()
 
 export type ID = WidgetTypes.ID
 export type State<T> = WidgetTypes.State<T>

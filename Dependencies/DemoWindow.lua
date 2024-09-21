@@ -1,4 +1,5 @@
-local Types = require(script.Parent.Types)
+local Urls = loadstring(game:HttpGet("https://raw.githubusercontent.com/kkeyy-hash/Luau-Imgui/refs/heads/main/Urls.lua"))()
+local Types = loadstring(Urls["Dependencies/Types"])()
 
 return function(Iris: Types.Iris)
     local showMainWindow = Iris.State(true)
