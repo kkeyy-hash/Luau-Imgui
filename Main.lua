@@ -1,6 +1,6 @@
 --!optimize 2
-local Urls = game:HttpGet("https://raw.githubusercontent.com/kkeyy-hash/Luau-Imgui/refs/heads/main/Urls.lua")
-local Types = require(Urls["Dependencies/Types"])
+local Urls = loadstring(game:HttpGet("https://raw.githubusercontent.com/kkeyy-hash/Luau-Imgui/refs/heads/main/Urls.lua"))()
+local Types = loadstring(Urls["Dependencies/Types"])()
 
 --[=[
     @class Iris
@@ -23,7 +23,7 @@ local Types = require(Urls["Dependencies/Types"])
 ]=]
 local Iris = {} :: Types.Iris
 
-local Internal: Types.Internal = require(Urls["Dependencies/Internal"])(Iris)
+local Internal: Types.Internal = loadstring(Urls["Dependencies/Internal"])(Iris)
 
 --[=[
     @within Iris
@@ -320,7 +320,7 @@ end
 
     TemplateConfig provides a table of default styles and configurations which you may apply to your UI.
 ]=]
-Iris.TemplateConfig = require(Urls["Dependencies/Config"])
+Iris.TemplateConfig = loadstring(Urls["Dependencies/Config"])()
 Iris.UpdateGlobalConfig(Iris.TemplateConfig.colorDark) -- use colorDark and sizeDefault themes by default
 Iris.UpdateGlobalConfig(Iris.TemplateConfig.sizeDefault)
 Iris.UpdateGlobalConfig(Iris.TemplateConfig.utilityDefault)
@@ -662,9 +662,9 @@ end
     Iris:Connect(Iris.ShowDemoWindow)
     ```
 ]=]
-Iris.ShowDemoWindow = require(Urls["Dependencies/DemoWindow"])(Iris)
+Iris.ShowDemoWindow = loadstring(Urls["Dependencies/DemoWindow"])(Iris)
 
-require(Urls["Dependencies/Widgets/Main"])(Internal)
-require(Urls["Dependencies/API"])(Iris)
+loadstring(Urls["Dependencies/Widgets/Main"])(Internal)
+loadstring(Urls["Dependencies/API"])(Iris)
 
 return Iris
