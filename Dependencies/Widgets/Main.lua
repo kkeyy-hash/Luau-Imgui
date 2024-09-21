@@ -1,5 +1,5 @@
-local Urls = game:HttpGet("https://raw.githubusercontent.com/kkeyy-hash/Luau-Imgui/refs/heads/main/Urls.lua")
-local Types = require(Urls["Dependencies/Types"])
+local Urls = loadstring(game:HttpGet("https://raw.githubusercontent.com/kkeyy-hash/Luau-Imgui/refs/heads/main/Urls.lua"))()
+local Types = loadstring(Urls["Dependencies/Types"])()
 
 local widgets = {} :: Types.WidgetUtility
 
@@ -410,24 +410,24 @@ return function(Iris: Types.Internal)
 
     Iris._utility = widgets
 
-    require(Urls["Dependencies/Widgets/Root"])(Iris, widgets)
-    require(Urls["Dependencies/Widgets/Window"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Root"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Window"])(Iris, widgets)
 
-    require(Urls["Dependencies/Widgets/Menu"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Menu"])(Iris, widgets)
 
-    require(Urls["Dependencies/Widgets/Format"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Format"])(Iris, widgets)
 
-    require(Urls["Dependencies/Widgets/Text"])(Iris, widgets)
-    require(Urls["Dependencies/Widgets/Button"])(Iris, widgets)
-    require(Urls["Dependencies/Widgets/Checkbox"])(Iris, widgets)
-    require(Urls["Dependencies/Widgets/RadioButton"])(Iris, widgets)
-    require(Urls["Dependencies/Widgets/Image"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Text"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Button"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Checkbox"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/RadioButton"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Image"])(Iris, widgets)
 
-    require(Urls["Dependencies/Widgets/Tree"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Tree"])(Iris, widgets)
 
-    require(Urls["Dependencies/Widgets/Input"])(Iris, widgets)
-    require(Urls["Dependencies/Widgets/Combo"])(Iris, widgets)
-    require(Urls["Dependencies/Widgets/Plot"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Input"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Combo"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Plot"])(Iris, widgets)
 
-    require(Urls["Dependencies/Widgets/Table"])(Iris, widgets)
+    loadstring(Urls["Dependencies/Widgets/Table"])(Iris, widgets)
 end
